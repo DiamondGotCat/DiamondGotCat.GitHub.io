@@ -183,12 +183,10 @@
   				resetTimeout = setTimeout(() => {
   					this.disabled = false;
   					this.classList.remove(doneClass);
+            console.log(" Youtube Go! ")
+            let newwin = open('https://youtube.com/@DiamondGotCat');
           }, resetDuration);
 
-
-
-
-          setTimeout(" window.open( 'https://youtube.com/@DiamondGotCat' ); ", 1000);
 
 
   			}, 600 + submitDuration);
