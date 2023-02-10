@@ -9,6 +9,9 @@
   	</svg>
   </button>
 
+  <audio id="StartUp" preload="auto">
+   <source src="StartUp.mp3" type="audio/mp3">
+</audio>
 
   <style>
     * {
@@ -173,17 +176,19 @@
   			this.disabled = true;
   			this.classList.add(runClass);
 
+        document.getElementById("StartUp").play();
+
   			clearTimeout(doneTimeout);
   			clearTimeout(resetTimeout);
 
   			doneTimeout = setTimeout(() => {
   				this.classList.remove(runClass);
   				this.classList.add(doneClass);
-
   				// reset the button
   				resetTimeout = setTimeout(() => {
   					this.disabled = false;
   					this.classList.remove(doneClass);
+
   				}, resetDuration);
 
 
@@ -192,7 +197,7 @@
 
 
 
-  			}, 600 + submitDuration);
+  			}, 2500 + submitDuration);
 
   		});
   	}
