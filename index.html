@@ -15,16 +15,25 @@
 
   <body bgcolor="#222222" text="#ffffff">
 
-
-    <h1>redirecting...</h1>
-
+    <div class="outer">
+      <div class="inner">
+        <h1>redirecting...</h1>
+      </div>
+    </div>
 
   </body>
 
   <style> 
-    * {
+    .outer {
       text-align: center;
-      display: flex;
+      display: table;
+      width: 100%;
+    }
+    .inner {
+    
+      display: table-cell;
+      vertical-align: middle;
+    
     }
   </style>
   
