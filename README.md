@@ -1,7 +1,7 @@
-# DiamondGotCat.GitHub.io
+ # DiamondGotCat.GitHub.io
 GitHub Pages repository.
 
-# Designed By HTML5 UP
+ # Designed By HTML5 UP
 
 Forty by HTML5 UP
 html5up.net | @ajlkn
