@@ -3,28 +3,18 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById("search-form").addEventListener("submit", function(event) {
       event.preventDefault(); // フォームのデフォルトの送信をキャンセル
   
-      var keyword = document.getElementById("search-input").value.toLowerCase(); // 入力されたキーワードを取得
+      var keyword = document.getElementById("search-input").value;
   
-      // JSONファイルの読み込み
-      fetch("Search-Contents.json")
-        .then(response => response.json())
-        .then(data => {
-          var results = data.filter(item => item.title.toLowerCase().includes(keyword) || item.description.toLowerCase().includes(keyword));
+      // キーワードをエンコードして検索URLを生成
+      var encodedKeyword = encodeURIComponent(keyword);
+      var searchUrl = "https://DiamondGotCat.GitHub.io/search?q=" + encodedKeyword;
   
-          var searchResults = document.getElementById("search-results");
-          searchResults.innerHTML = ""; // 検索結果をクリア
+      // リダイレクトする場合
+      // window.location.href = searchUrl;
   
-          if (results.length === 0) {
-            searchResults.innerHTML = "該当する結果はありません。";
-          } else {
-            results.forEach(result => {
-              var resultItem = document.createElement("div");
-              resultItem.innerHTML = "<h3>" + result.title + "</h3><p>" + result.description + "</p><a href='" + result.url + "'>詳細を見る</a>";
-              searchResults.appendChild(resultItem);
-            });
-          }
-        })
-        .catch(error => console.error(error));
+      // もしくは、検索結果を表示する要素に設定する
+      var searchResults = document.getElementById("search-results");
+      searchResults.innerHTML = "<iframe src='" + searchUrl + "'></iframe>";
     });
   });
   
