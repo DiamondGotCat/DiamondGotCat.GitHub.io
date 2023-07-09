@@ -2,15 +2,119 @@
 <html>
 	<head>
 		<title>DaiyaNeko/ダイヤ猫</title>
-		<meta http-equiv="refresh" content="3;url=https://sites.google.com/view/daiyaneko-build-jp/">
+
+		<style>
+
+
+			.btn-square {
+			  display: inline-block;
+			  padding: 0.5em 1em;
+			  text-decoration: none;
+			  background: #668ad8;/*ボタン色*/
+			  color: #FFF;
+			  border-bottom: solid 4px #627295;
+			  border-radius: 3px;
+			}
+			.btn-square:active {
+			  /*ボタンを押したとき*/
+			  -webkit-transform: translateY(4px);
+			  transform: translateY(4px);/*下に動く*/
+			  border-bottom: none;/*線を消す*/
+			}
+
+
+			.ribbon9 {
+			  display: inline-block;
+			  position: relative;
+			  height: 45px;
+			  text-align: center;
+			  box-sizing: border-box;
+			}
+			.ribbon9:before {/*左側のリボン端*/
+			  content: '';
+			  position: absolute;
+			  width: 10px;
+			  bottom: -10px;
+			  left: -35px;
+			  z-index: -2;
+			  border: 20px solid #56adf3;
+			  border-left-color: transparent;/*山形に切り抜き*/
+			}
+			
+			.ribbon9:after {/*右側のリボン端*/
+			  content: '';
+			  position: absolute;
+			  width: 10px;
+			  bottom: -10px;
+			  right: -35px;
+			  z-index: -2;
+			  border: 20px solid #56adf3;
+			  border-right-color: transparent;/*山形に切り抜き*/
+			}
+			
+			.ribbon9 h3 {
+			  display: inline-block;
+			  position: relative;
+			  margin: 0;
+			  padding: 0 20px;
+			  line-height: 45px;
+			  font-size: 18px;
+			  color: #FFF;
+			  background: #2196F3;/*真ん中の背景色*/
+			}
+			.ribbon9 h3:before {
+			  position: absolute;
+			  content: '';
+			  top: 100%;
+			  left: 0;
+			  border: none;
+			  border-bottom: solid 10px transparent;
+			  border-right: solid 15px #397eb5;/*左の折り返し部分*/
+			}
+			.ribbon9 h3:after {
+			  position: absolute;
+			  content: '';
+			  top: 100%;
+			  right: 0;
+			  border: none;
+			  border-bottom: solid 10px transparent;
+			  border-left: solid 15px #397eb5;/*右の折り返し部分*/
+			}
+
+
+			.container {
+			    height: 200px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			}
+			
+			.item {
+			    width: 10em;
+			}
+			
+			
+		</style>
+		
 	</head>
 
 	<body>
+		<div class="container">
+        		
+			<div class="item">
 
-		<h1>ホームページ</h1>
-		<h2><a href="https://sites.google.com/view/daiyaneko-build-jp/">日本語のホームページ</a>にリダイレクト中…</h2>
-		<h3>3秒後にリダイレクトします…</h3>
+				<div class="ribbon9">
+	 			<h3>DaiyaNekoのリンク一覧</h3>
+				</div>
+				<br>
+				<a href="#" class="btn-square">DaiyaNeko Build(英語版)</a>
+				<a href="#" class="btn-square">DaiyaNeko ビルド</a>
+				<a href="#" class="btn-square">Minecraft Wiki</a>
+				
+			</div>
+
+		</div>
 
 	</body>
-
+	
 </html>
