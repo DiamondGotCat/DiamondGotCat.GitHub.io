@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Pythonでπを求める！"
+date:   2024-01-08 08:10:53 +0900
+categories: Python Pi Py Get
+---
+
+Pythonで、円の中にドットを描き、円に収まっているどうかを判定し、円周率を求めるプログラムを書きました。
+
+ライブラリ「Rich」が必要です。
+
+{% highlight python %}
+
+import random
+from rich.progress import track
+
+def estimate_pi(num_dots):
+    inside_circle = 0
+
+    for i in range(num_dots):
+        x = random.uniform(0, 100)
+        y = random.uniform(0, 100)
+
+        # ドットが円内に収まっているか判定
+        if (x - 50) ** 2 + (y - 50) ** 2 <= 50 ** 2:
+            inside_circle += 1
+
+    # 円周率の推定
+    estimated_pi = (inside_circle / num_dots) * 4
+    return estimated_pi
+
+num_dots = 0
+numbers = []
+
+for i in track(range(100)):
+
+    num_dots += 25000
+
+    print(f"Process '{i + 1}' is working...")
+    # 円周率を推定
+    estimated_pi_value = estimate_pi(num_dots)
+    numbers.append(estimated_pi_value)
+    print(f"Process '{i + 1}' is finished!")
+    print(f"Result: {estimated_pi_value}")
+    print("Average results so far: ", sum(numbers) / len(numbers))
+    print("")
+
+print("Average of results: ", sum(numbers) / len(numbers))
+
+{% endhighlight %}
