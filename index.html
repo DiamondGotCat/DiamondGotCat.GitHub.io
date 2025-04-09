@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>OwO DOMAIN CHANGE | DiamondGotCat OLD</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+  <body class="bg-black">
+    <header>
+      <nav class="relative shadow" x-data="{ isOpen: false }">
+        <div class="container px-6 py-4 mx-auto">
+          <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="flex items-center justify-between">
+              <a href="https://diamondgotcat.net">
+                <img alt="" height="20" src="https://diamondgotcat.net/DiamondGotCat-12-Full-No-BG_128.png"/>
+              </a>
+              <div class="flex lg:hidden">
+                <button @click="isOpen = !isOpen" aria-label="toggle menu" class="hover:text-gray-600 focus:outline-none focus:text-gray-600 text-gray-200" type="button" x-cloak="">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" x-show="!isOpen" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8h16M4 16h16" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" x-show="isOpen" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center bg-black" x-cloak="">
+              <div class="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
+                <a class="px-3 py-2 mx-3 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 hover:bg-gray-100 text-gray-200" href="https://github.com/DiamondGotCat">GitHub</a>
+                <a class="px-3 py-2 mx-3 mt-2 transition-colors duration-300 transform rounded-md lg:mt-0 hover:bg-gray-100 text-gray-200" href="https://diamondgotcat.net/res">Resources</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container flex items-center px-8 py-16 mx-auto">
+        <div>
+          <p class="text-sm font-medium text-blue-400">OwO DOMAIN CHANGE</p>
+          <h1 class="mt-3 text-2xl font-semibold text-white md:text-3xl">There is a new URL</h1>
+          <p class="mt-4 text-gray-400">This site is discontinued. Please move to the new URL.</p>
+
+          <div class="flex items-center mt-6 gap-x-3">
+            <a href="https://diamondgotcat.net">
+              <button class="px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 rounded-lg shrink-0 sm:w-auto hover:bg-blue-500 bg-blue-600">
+                Back to Top
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
